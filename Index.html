@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Codex</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function myfunction() {
+    var Uname = document.getElementById("uname").value;
+    sessionStorage.setItem("textvalue",Uname);
+    return true;
+    }
+    function validate() {
+    var username = document.getElementById("uname"); 
+    var password = document.getElementById("pass");
+    
+    if(username.value=="Ekansh" &&password.value=="Carrot")
+    {
+      alert("Login Succesful");
+      return true;
+    }
+    else if(username.value=="Zaid" &&password.value=="JavaS")
+    {
+    alert("Login Succesful");
+    return true;
+    }
+    else
+    {
+      alert("Incorrect Password Or Username")
+      return false;
+    }
+  }
+    </script>
+</head>
+
+<body>
+  <form onsubmit="return validate()"  action="bb.html">
+  <div class="g">
+    <h2>Login</h2>
+    <h5>Enter Your Username</h5>
+    <input type="text" placeholder="Username" id="uname" required />
+    <br>
+    <h5>Enter Your Password</h5>
+    <input type="password" placeholder="Password" id="pass" required />
+    <br>
+    <br>
+    <button onclick="return myfunction()" type="submit">Login</button>
+    <br>
+    <br>
+    </form>
+  </div>
+</body>
+</html>
